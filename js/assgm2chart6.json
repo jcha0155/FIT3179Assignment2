@@ -1,0 +1,131 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Income Inequality",
+    "title": "Income Inequality Rate from 1992 to 2019 ",
+  
+    
+   
+ 
+    "data": {
+        "url": "https://raw.githubusercontent.com/jcha0155/3179/main/FIT3179%20Assignment%202/data/datasetassgmchart5.csv"
+    },
+
+    "width": 800,
+    "height": 500,
+    "mark": {
+        "type": "line",
+        "point":{
+      
+        "filled": false,
+        "fill": "white"
+      
+        } 
+    },
+    "encoding": {
+    "x": {"field": "Year", "type": "ordinal"},
+    "y": {
+      "field": "Gini coefficient",
+      "type": "quantitative",
+      "title": "Income Inequality Rate (Gini coefficient)"
+      
+    },
+    "color": {
+      "field": "Country", 
+      "type": "nominal",
+      "scale": {
+
+        "domain": [
+
+          "Argentina - urban",
+          "Bolivia",
+          "Brazil",
+          "Chile",
+          "Colombia",
+          "Ecuador",
+          "Guyana",
+          "Paraguay",
+          "Peru",
+          "Suriname",
+          "Uruguay",
+          "Venezuela"
+        ],
+        "range": [
+          "#e41a1c",
+          "#984ea3",
+          "#ff7f00",
+          "#a6cee3",
+          "#377eb8",
+          "#a65628",
+          "#1b9e77",
+          "#d95f02",
+          "#7570b3",
+          "#000",
+          "#dd1c77",
+          "#feb24c"
+          ]
+
+      }
+      
+    },
+    
+    "tooltip": [
+      {"field": "Gini coefficient", "type": "quantitative", "title": "Income Inequality Rate"},
+      {"field": "Country", "type": "nominal", "title": "Country"}
+      
+    ]
+    
+    },
+
+     
+  "params": [
+    {
+      "name": "Country",
+      "bind":{
+
+        "input":"select",
+        "options":[
+          null,
+          "Argentina",
+          "Bolivia",
+          "Brazil",
+          "Chile",
+          "Colombia",
+          "Ecuador",
+          "Guyana",
+          "Paraguay",
+          "Peru",
+          "Suriname",
+          "Uruguay",
+          "Venezuela"
+        ],
+        "labels": [
+          "Show All",
+          "Argentina",
+          "Bolivia",
+          "Brazil",
+          "Chile",
+          "Colombia",
+          "Ecuador",
+          "Guyana",
+          "Paraguay",
+          "Peru",
+          "Suriname",
+          "Uruguay",
+          "Venezuela"
+        ],
+        "name": "Country"
+      }
+    }
+
+  ],
+  "transform":[
+
+    {"filter": "Country == null || datum.Country == Country"}
+
+
+
+  ]
+  
+  
+  
+}
