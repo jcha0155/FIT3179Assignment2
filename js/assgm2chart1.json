@@ -2,10 +2,14 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 1150,
     "height": 600,
-    "title": "Homicide Deaths Per 100,000 according to country in 2019 (note: countries in white do not have available data)",
+    "title": "Figure 1: Homicide Deaths Per 100k according to country in 2019 (note: countries in white do not have available data)",
  
     "projection": {"type": "equalEarth"},
+    
+   "layer":[
+    {
     "data": {
+        
         "url": "https://raw.githubusercontent.com/JiazhouLiu/FIT3179/main/VegaLite/2_symbol_map/js/ne_110m_admin_0_countries.topojson",
             "format": {
                 "type": "topojson",
@@ -56,6 +60,33 @@
         }
     ]
     }
+
+}, 
+
+{
+ 
+        "data": {
+          "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+          "format": {"type": "topojson", "feature": "oceans"}
+        },
+        "mark": {"type": "geoshape", "fill": "skyblue"}
+      
+},
+
+{
+ 
+    "data": {
+      "url": "https://raw.githubusercontent.com/jcha0155/FIT3179Assignment2/main/data/ne_110m_graticules_30.json",
+      "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+    },
+    "mark": {"type": "geoshape", "fill": null, "stroke":"lightgray"}
+  
+}
+
+
+
+
+]
 
 
 

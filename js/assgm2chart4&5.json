@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "Comparison between Homicide Death Rates and Unemployment Rates ",
-    "title": "Comparison between Homicide Death Rates (left) and Unemployment Rates (right) ",
+    "title": "Figure 4 & 5: Comparison between Homicide Death Rates (left) and Unemployment Rates (right) ",
   
     
    

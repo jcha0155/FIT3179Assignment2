@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "Income Inequality",
-    "title": "Income Inequality Rate from 1992 to 2019 ",
+    "title": "Figure 6: Income Inequality Rate from 1992 to 2019 ",
   
     
    
